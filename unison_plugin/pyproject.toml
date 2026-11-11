@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unison-vllm-patch"
+version = "0.1.0"
+
+[tool.setuptools]
+py-modules = ["unison_vllm_patch"]
+
+[project.entry-points."vllm.general_plugins"]
+unison = "unison_vllm_patch:register"
